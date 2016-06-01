@@ -1,0 +1,17 @@
+<h1>Welcome to my first Rails page</h1>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:search_tag, "Search for:") %><br />
+  <%= text_field_tag(:search_tag) %><br />
+  
+  
+  <%= check_box_tag(:pet_dog) %>
+<%= label_tag(:pet_dog, "I own a dog") %><br />
+  <%= submit_tag("Search") %>
+  
+  <%= radio_button_tag(:age, "child") %>
+<%= label_tag(:age_child, "I am younger than 21") %><br />
+
+<%= month_field(:user, :birthday_month) %><br />
+<%= week_field(:user, :birthday_week) %>
+<% end %>
